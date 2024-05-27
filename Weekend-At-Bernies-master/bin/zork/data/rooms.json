@@ -9,7 +9,8 @@
         {
           "isLocked": true,
           "direction": "West",
-          "adjacentRoom": "Bridge"
+          "adjacentRoom": "Bridge",
+           "keyId" : "1111"
         }
       ]
     },
@@ -52,49 +53,44 @@
     {
       "id": "Communication Room",
       "name": "Communication Room",
-      "longdescription": "The kitchen of the Overlook Hotel is a hive of activity, filled with the clatter of pots and pans and the aroma of delicious meals. Chefs bustle about, chopping vegetables and stirring bubbling pots on the stove. Shelves are stocked with ingredients from around the world, and industrial-sized appliances hum with energy. Despite its warmth and activity, there's an underlying sense of unease in the air.",
-      "shortdescription":"The bustling heart of the hotel where meals are prepared for guests and staff.",
+      "longdescription": "A glass room, with a faint, white light. In front of you you can hear the faint sounds of a radio, where you can hear someone talking in the same alien language you heard earlier. There are also knobs to adjust the volume, and a black, walkie talkie in front of you, which is switched off.",
+      "shortdescription":"A room where in front of you is a radio where someone is speaking in an alien language, and a walkie talkie that is switched off.",
       "exits": [
         {
           "isLocked": false,
           "direction": "South",
-          "adjacentRoom": "Storage Room"
-        },
+          "adjacentRoom": "Hallway"
+        }
+      ]
+    },
+    {
+      "id": "Situation Room",
+      "name": "Situation Room",
+      "longdescription": "A small, glass, room, where you can see the view of the Earth and space outside. There is also a holographic display table that appears to be broken, with nothing on it.",
+      "shortdescription":"A glass room featuring a view of space, and a holographic display table that appears to be broken.",
+      "exits": [
         {
           "isLocked": false,
-          "direction": "West",
-          "adjacentRoom": "Hallway 1b"
+          "direction": "East",
+          "adjacentRoom": "Hallway",
         }
       ]
     },
     {
       "id": "Storage Room",
       "name": "Storage Room",
-      "longdescription": "The storage room is a small, cluttered space tucked away in a corner of the hotel. Boxes and crates line the walls, filled with everything from cleaning supplies to spare linens. Dust motes dance in the dim light filtering in through a small window, casting long shadows across the room. The air is thick with the musty scent of old cardboard and forgotten belongings.",
+      "longdescription": "The storage room is a large, cluttered space. Boxes and crates line the walls, filled with everything from what look like weapons, to other supplies and equipment for the ship. All boxes are locked,, but they look like they haven't been opened in a while. .",
       "shortdescription":"A small room used for storing supplies and equipment.",
       "exits": [
         {
           "isLocked": true,
           "direction": "East",
           "adjacentRoom": "Bathroom",
-          "keyId": "1234"
+          "keyId": "4567"
         }
       ]
     },
-    {
-      "id": "Ballroom",
-      "name": "Ballroom",
-      "longdescription": "The ballroom of the Overlook Hotel is a magnificent sight to behold, with high ceilings, intricate moldings, and a gleaming hardwood floor. A raised stage at one end of the room is flanked by velvet curtains, while crystal chandeliers hang overhead, casting a soft glow over the space. Rows of chairs line the perimeter, waiting to be filled with guests eager to partake in the festivities. The air is charged with anticipation, as if the room itself is alive with the promise of revelry and celebration.",
-      "shortdescription":"An elegant space for gatherings and events, featuring a stage and dance floor.",
-      "exits": [
-        {
-          "isLocked": true,
-          "direction": "East",
-          "adjacentRoom": "Bathroom",
-          "keyId": "1234"
-        }
-      ]
-    },
+    
     {
       "id": "Classic Guest Room",
       "name": "Classic Guest Room",
