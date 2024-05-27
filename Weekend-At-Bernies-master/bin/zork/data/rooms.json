@@ -29,13 +29,23 @@
     {
       "id": "Hallway",
       "name": "Hallway",
-      "longdescription": "A long, dimly lit hallway, which has multiple doors, to the north, south, and west. The door on the south ",
-      "shortdescription":"A luxurious ballroom adorned with gold decor and sparkling chandeliers.",
+      "longdescription": "A long, dimly lit hallway, which has multiple doors, to the north, south, and west. There is a gun laying on top of a table in front of the south door. You suddenly hear a loud sound, of an creature communicating in another language.  ",
+      "shortdescription":"A dimly lit hallway, with doors leading to the north, south and west. There is a gun laying on top of a table to the south, and you suddenly hear a loud, foreign language.",
       "exits": [
         {
           "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Communication Room"
+        },
+        {
+          "isLocked": false,
           "direction": "West",
-          "adjacentRoom": "Hallway 1a"
+          "adjacentRoom": "Situation room"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Storage Room"
         }
       ]
     },
