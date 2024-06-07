@@ -1,283 +1,376 @@
 {
   "rooms": [
     {
-      "id": "Lobby",
-      "name": "Lobby",
-      "longdescription": "The lobby of the Overlook Hotel welcomes guests with its opulent decor and old-world charm. A spacious area with polished marble floors, towering columns, and a grand staircase leading to the upper floors. Large windows let in the faint glow of moonlight, casting long shadows across the room. Antique furniture and elegant tapestries adorn the walls, hinting at the hotel's storied history.",
-      "shortdescription":"The entrance hall of the Overlook Hotel, featuring a grand staircase, chandeliers, and ornate furnishings.",
+      "id": "Captain's Quarters",
+      "name": "Captain's Quarters",
+      "longdescription": "The Captain's Quarters and main control area of the ship. It features a chair where a captain would usually control the ship, and there is a control panel with a large red button in front of you. There is a large closed door at the west end of the room. ",
+      "shortdescription":"The main control area of the ship, featuring a control panel and a large red button in front of you, with a closed door to the west.",
       "exits": [
         {
-          "isLocked": false,
-          "direction": "East",
-          "adjacentRoom": "Hallway 1a"
+          "isLocked": true,
+          "direction": "West",
+          "adjacentRoom": "Bridge",
+           "keyId" : "1111"
         }
       ]
     },
     {
-      "id": "Hallway 1a",
+      "id": "Bridge",
+      "name": "Bridge",
+      "longdescription": "A long, glass bridge leading to another area of the ship. You see the control room behind you, and the echoing of faint sounds in the distance. ",
+      "shortdescription":"A glass bridge, leading to other areas of the ship.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Hallway"
+        }
+      ]
+    },
+    {
+      "id": "Hallway",
       "name": "Hallway",
-      "longdescription": "The hallway extends from the lobby, its walls lined with portraits of past hotel guests and vintage sconces casting a dim light. The hallway stretches into the distance, branching off into other corridors and rooms of the hotel. The air is still, with only the faint sound of footsteps echoing in the distance.",
-      "shortdescription":"A narrow hallway branching off from the lobby, leading to other areas of the hotel.",
+      "longdescription": "A long, dimly lit hallway, which has multiple doors, to the north, south, and west. There is a gun laying on top of a table in front of the south door. You suddenly hear a loud sound, of an creature communicating in another language.  ",
+      "shortdescription":"A dimly lit hallway, with doors leading to the north, south and west. There is a gun laying on top of a table to the south, and you suddenly hear a loud, foreign language.",
       "exits": [
         {
-          "isLocked":false,
-          "direction": "West",
-          "adjacentRoom": "Lobby"
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Communication Room"
         },
         {
-          "isLocked":false,
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Situation room"
+        },
+        {
+          "isLocked": true,
+          "direction": "South",
+          "adjacentRoom": "Storage Room",
+          "keyId": "4567"
+        },
+        {
+          "isLocked": true,
           "direction": "East",
-          "adjacentRoom": "Gold Room"
-        },
-        {
-          "isLocked":false,
-          "direction": "South",
-          "adjacentRoom": "Hallway 1b"
+          "adjacentRoom": "Bridge"
         }
       ]
     },
     {
-      "id": "Gold Room",
-      "name": "Gold Room",
-      "longdescription": "The Gold Room is the crown jewel of the Overlook Hotel, a lavish ballroom resplendent in gold leaf and crystal. Ornate chandeliers hang from the ceiling, casting a warm glow over the dance floor below. Intricate patterns adorn the walls, reflecting the opulence of a bygone era. Velvet curtains frame large windows, offering glimpses of the moonlit landscape outside.",
-      "shortdescription":"A luxurious ballroom adorned with gold decor and sparkling chandeliers.",
-      "exits": [
-        {
-          "isLocked": false,
-          "direction": "West",
-          "adjacentRoom": "Hallway 1a"
-        }
-      ]
-    },
-    {
-      "id": "Kitchen",
-      "name": "Kitchen",
-      "longdescription": "The kitchen of the Overlook Hotel is a hive of activity, filled with the clatter of pots and pans and the aroma of delicious meals. Chefs bustle about, chopping vegetables and stirring bubbling pots on the stove. Shelves are stocked with ingredients from around the world, and industrial-sized appliances hum with energy. Despite its warmth and activity, there's an underlying sense of unease in the air.",
-      "shortdescription":"The bustling heart of the hotel where meals are prepared for guests and staff.",
+      "id": "Communication Room",
+      "name": "Communication Room",
+      "longdescription": "A glass room, with a faint, white light. In front of you you can hear the faint sounds of a radio, where you can hear someone talking in the same alien language you heard earlier. There are also knobs to adjust the volume, and a walkie talkie in front of you.",
+      "shortdescription":"A room where in front of you is a radio where someone is speaking in an alien language, and a walkie talkie that is switched off.",
       "exits": [
         {
           "isLocked": false,
           "direction": "South",
-          "adjacentRoom": "Storage Room"
-        },
+          "adjacentRoom": "Hallway"
+        }
+      ]
+    },
+    {
+      "id": "Situation Room",
+      "name": "Situation Room",
+      "longdescription": "A small, glass, room, where you can see the view of the Earth and space outside. There is also a holographic display table that appears to be broken, with nothing on it.",
+      "shortdescription":"A glass room featuring a view of space, and a holographic display table that appears to be broken.",
+      "exits": [
         {
           "isLocked": false,
-          "direction": "West",
-          "adjacentRoom": "Hallway 1b"
+          "direction": "East",
+          "adjacentRoom": "Hallway"
         }
       ]
     },
     {
       "id": "Storage Room",
       "name": "Storage Room",
-      "longdescription": "The storage room is a small, cluttered space tucked away in a corner of the hotel. Boxes and crates line the walls, filled with everything from cleaning supplies to spare linens. Dust motes dance in the dim light filtering in through a small window, casting long shadows across the room. The air is thick with the musty scent of old cardboard and forgotten belongings.",
-      "shortdescription":"A small room used for storing supplies and equipment.",
+      "longdescription": "The storage room is a large, cluttered space. Boxes and crates line the walls, filled with everything from what look like weapons, to other supplies and equipment for the ship. All boxes are locked except for one, but they look like they haven't been opened in a while. There is also something under the unlocked box.",
+      "shortdescription":"A small room used for storing supplies and equipment. There is an unlocked box with something under it. ",
       "exits": [
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "Mess Hall"
+        },
+         {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Crew Lounge"
+         }
+      ]
+    },
+    
+    {
+      "id": "Mess Hall",
+      "name": "Mess Hall",
+      "longdescription": "A cafeteria, which has long tables and benches, used to be where the crew gathered to eat and discuss daily activities, but now it sits empty. There is a sandwhich and a bottle of water on the table.",
+      "shortdescription":"A cafeteria, which is empty, and has a sandwhich and a bottle of water on a table.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Storage Room"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Kitchen"
+        }
+      ]
+    },
+    {
+      "id": "Kitchen",
+      "name": "Kitchen",
+      "longdescription": "A functional space where meals are prepped for the mess hall. It is equipped with advanced cooking appliances and storage for ingredients.  ",
+      "shortdescription":"A space for food preperation and storage.",
+      "exits": [
+        {
+            "isLocked": false,
+            "direction": "North",
+            "adjacentRoom": "Mess Hall"
+          }
+        
+      ]
+    },
+    {
+      "id": "Crew Lounge",
+      "name": "Crew Lounge",
+      "longdescription": "A relaxed area with comfortable seating, entertainment, games, and books. It looked like people used to be here. There is a case with a red box in the corner of the room. ",
+      "shortdescription":"A lounge area with comfortable seating and entertainment systems",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Crew Cabins"
+        },
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "Storage Room"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Medical Bay"
+        }
+      ]
+    },
+    {
+      "id": "Medical Bay",
+      "name": "Medical Bay",
+      "longdescription": "A well equipped facility for treating illnesses,  injuries, and conducting medical examinations. There is another holographic screen that displays nothing. ",
+      "shortdescription":" A facility for treating illnesses. There is a broken holographic display in the corner.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Doctor's Office"
+        }, 
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Hallway 2"
+        },
         {
           "isLocked": true,
           "direction": "East",
-          "adjacentRoom": "Bathroom",
-          "keyId": "1234"
-        }
-      ]
-    },
-    {
-      "id": "Ballroom",
-      "name": "Ballroom",
-      "longdescription": "The ballroom of the Overlook Hotel is a magnificent sight to behold, with high ceilings, intricate moldings, and a gleaming hardwood floor. A raised stage at one end of the room is flanked by velvet curtains, while crystal chandeliers hang overhead, casting a soft glow over the space. Rows of chairs line the perimeter, waiting to be filled with guests eager to partake in the festivities. The air is charged with anticipation, as if the room itself is alive with the promise of revelry and celebration.",
-      "shortdescription":"An elegant space for gatherings and events, featuring a stage and dance floor.",
-      "exits": [
-        {
-          "isLocked": false,
-          "direction": "North",
-          "adjacentRoom": "Hallway 1e"
-        }
-      ]
-    },
-    {
-      "id": "Classic Guest Room",
-      "name": "Classic Guest Room",
-      "longdescription": "The room exudes a timeless elegance, with rich wood furnishings, plush carpets, and traditional artwork adorning the walls. A comfortable queen-sized bed sits against one wall, flanked by matching nightstands topped with vintage lamps. A cozy seating area by the window offers a perfect spot to enjoy a morning cup of coffee or a quiet moment of reflection. Soft, neutral tones create a warm and inviting atmosphere, inviting guests to unwind and relax in this tranquil haven.",
-      "shortdescription":"A cozy retreat with classic furnishings and a serene ambiance.",
-      "exits": [
-        {
-          "isLocked": false,
-          "direction": "West",
-          "adjacentRoom": "Hallway 1c"
-        },
-        {
-          "isLocked": false,
-          "direction": "East",
-          "adjacentRoom": "Classic Bathroom"
-        }
-      ]
-    },
-    {
-      "id": "Modern Guest Room",
-      "name": "Modern Guest Room",
-      "longdescription": "The room embraces a sleek and minimalist aesthetic, with clean lines, minimalist furnishings, and contemporary artwork. A king-sized bed with crisp white linens takes center stage, framed by sleek bedside tables and minimalist lighting fixtures. A sleek desk tucked into the corner offers a functional workspace for guests on the go. Floor-to-ceiling windows flood the room with natural light, offering sweeping views of the surrounding landscape. Cool, neutral tones and understated accents create a sense of calm and serenity in this modern oasis.",
-      "shortdescription":"A modern oasis with sleek design and minimalist decor.",
-      "exits": [
-        {
-          "isLocked": false,
-          "direction": "West",
-          "adjacentRoom": "Hallway 1d"
-        },
-        {
-          "isLocked": false,
-          "direction": "East",
-          "adjacentRoom": "Modern Bathroom"
-        }
-      ]
-    },
-    {
-      "id": "Rustic Guest Room",
-      "name": "Rustic Guest Room",
-      "longdescription": "The room exudes rustic charm and cozy comfort, with warm wood furnishings, soft textiles, and charming accents. A wrought-iron queen-sized bed with a cozy quilt takes center stage, surrounded by rustic wooden furniture and vintage decor. A quaint seating area by the fireplace offers a cozy spot to curl up with a good book on chilly evenings. Soft, earthy tones and natural textures create a warm and inviting atmosphere, inviting guests to unwind and embrace the simple pleasures of country living.",
-      "shortdescription":"A charming retreat with rustic charm and cozy accents.",
-      "exits": [
-        {
-          "isLocked": false,
-          "direction": "West",
-          "adjacentRoom": "Hallway 1e"
-        },
-        {
-          "isLocked": false,
-          "direction": "East",
-          "adjacentRoom": "Rustic Bathroom"
-        }
-      ]
-    },
-    {
-      "id": "Classic Bathroom",
-      "name": "Classic Bathroom",
-      "longdescription": "The bathroom exudes timeless elegance and vintage charm, with classic fixtures, marble countertops, and polished brass accents. A clawfoot bathtub takes center stage, surrounded by gleaming subway tiles and a vintage-inspired shower curtain. A pedestal sink with ornate detailing provides a touch of old-world charm, while a large mirror reflects the soft glow of the overhead sconces. Soft, fluffy towels and a selection of luxury bath products complete the picture, inviting guests to indulge in a relaxing soak and pamper themselves in this elegant sanctuary.",
-      "shortdescription":"A classic bathroom with elegant fixtures and vintage charm.",
-      "exits": [
-        {
-          "isLocked": false,
-          "direction": "West",
-          "adjacentRoom": "Classic Guest Room"
-        }
-      ]
-    },
-    {
-      "id": "Modern Bathroom",
-      "name": "Modern Bathroom",
-      "longdescription": "The bathroom embraces modern design and contemporary amenities, with clean lines, minimalist fixtures, and sleek finishes. A walk-in shower with frameless glass doors takes center stage, surrounded by sleek subway tiles and a rainfall showerhead. A floating vanity with a quartz countertop offers ample storage space and a sleek, modern look. A large mirror with integrated LED lighting adds a touch of glamour, while a selection of eco-friendly bath products and plush towels provide a luxurious touch. With its modern amenities and minimalist design, this bathroom offers a sleek and stylish retreat for guests seeking contemporary comfort.",
-      "shortdescription":"A modern bathroom with sleek design and contemporary amenities.",
-      "exits": [
-        {
-          "isLocked": false,
-          "direction": "West",
-          "adjacentRoom": "Modern Guest Room"
-        }
-      ]
-    },
-    {
-      "id": "Rustic Bathroom",
-      "name": "Rustic Bathroom",
-      "longdescription": "The bathroom exudes rustic charm and cozy comfort, with warm wood accents, natural materials, and charming details. A vintage-inspired clawfoot tub takes center stage, surrounded by rustic wood paneling and a whimsical shower curtain featuring a woodland motif. A weathered wood vanity with a marble countertop adds a touch of rustic elegance, while a large mirror reflects the soft glow of the vintage-inspired sconces. Handcrafted pottery and woven baskets add a cozy, artisanal touch, while a selection of organic bath products and fluffy towels invite guests to relax and unwind in this charming retreat.",
-      "shortdescription":"A charming bathroom with rustic accents and cozy charm.",
-      "exits": [
-        {
-          "isLocked": false,
-          "direction": "West",
-          "adjacentRoom": "Rustic Guest Room"
-        }
-      ]
-    },
-    {
-      "id": "Hallway 1b",
-      "name": "Hallway",
-      "longdescription":"The hallway stretches like a shadowy artery through the heart of the Overlook Hotel, connecting the lobby to the guest rooms, kitchen, and other areas of the hotel. The narrow corridor is dimly lit by flickering sconces set into the walls, casting long shadows that dance across the faded wallpaper. Vintage artwork adorns the walls, depicting scenes of bygone eras and echoing the hotel's storied past. The air is heavy with the scent of old wood and dust, with the faint echoes of footsteps and distant whispers adding to the eerie atmosphere. Despite its faded grandeur, there's a palpable sense of history and mystery lurking within the shadows of Hallway 2, waiting to be discovered by intrepid adventurers.",
-      "shortdescription":"A long corridor connecting various rooms of the hotel, illuminated by dim sconces and lined with vintage artwork.",
-      "exits": [
-        {
-          "isLocked": false,
-          "direction": "West",
-          "adjacentRoom": "Kitchen"
-        },
-        {
-          "isLocked": false,
-          "direction": "East",
-          "adjacentRoom": "Elevator"
-        },
-        {
-          "isLocked": false,
-          "direction": "South",
-          "adjacentRoom": "Hallway 1c"
-        }
-      ]
-    },
-    {
-      "id": "Hallway 1c",
-      "name": "Hallway",
-      "longdescription":"The hallway stretches like a shadowy artery through the heart of the Overlook Hotel, connecting the lobby to the guest rooms, kitchen, and other areas of the hotel. The narrow corridor is dimly lit by flickering sconces set into the walls, casting long shadows that dance across the faded wallpaper. Vintage artwork adorns the walls, depicting scenes of bygone eras and echoing the hotel's storied past. The air is heavy with the scent of old wood and dust, with the faint echoes of footsteps and distant whispers adding to the eerie atmosphere. Despite its faded grandeur, there's a palpable sense of history and mystery lurking within the shadows of Hallway 2, waiting to be discovered by intrepid adventurers.",
-      "shortdescription":"A long corridor connecting various rooms of the hotel, illuminated by dim sconces and lined with vintage artwork.",
-      "exits": [
-        {
-          "isLocked": false,
-          "direction": "East",
-          "adjacentRoom": "Classic Guest Room"
+          "adjacentRoom": "Engineering Room",
+          "keyId": "2222"
         },
         {
           "isLocked": false,
           "direction": "North",
-          "adjacentRoom": "Hallway 1b"
-        },
-        {
-          "isLocked": false,
-          "direction": "South",
-          "adjacentRoom": "Hallway 1d"
+          "adjacentRoom": "Crew Lounge"
         }
       ]
     },
     {
-      "id": "Hallway 1d",
-      "name": "Hallway",
-      "longdescription":"The hallway stretches like a shadowy artery through the heart of the Overlook Hotel, connecting the lobby to the guest rooms, kitchen, and other areas of the hotel. The narrow corridor is dimly lit by flickering sconces set into the walls, casting long shadows that dance across the faded wallpaper. Vintage artwork adorns the walls, depicting scenes of bygone eras and echoing the hotel's storied past. The air is heavy with the scent of old wood and dust, with the faint echoes of footsteps and distant whispers adding to the eerie atmosphere. Despite its faded grandeur, there's a palpable sense of history and mystery lurking within the shadows of Hallway 2, waiting to be discovered by intrepid adventurers.",
-      "shortdescription":"A long corridor connecting various rooms of the hotel, illuminated by dim sconces and lined with vintage artwork.",
+      "id": "Engineering Room",
+      "name": "Engineering Room",
+      "longdescription": "An area filled with the ship's technical operations. It's has  various consoles, monitors, and tools necessary for maintaining and repairing the ship. There is a red keycard on the floor.",
+      "shortdescription":"The area for the ship's techninical operations ",
       "exits": [
         {
           "isLocked": false,
-          "direction": "East",
-          "adjacentRoom": "Modern Guest Room"
-        },
-        {
-          "isLocked": false,
-          "direction": "North",
-          "adjacentRoom": "Hallway 1c"
-        },
-        {
-          "isLocked": false,
-          "direction": "South",
-          "adjacentRoom": "Hallway 1e"
+          "direction": "West",
+          "adjacentRoom": "Medical Bay"
         }
       ]
     },
     {
-      "id": "Hallway 1e",
-      "name": "Hallway",
-      "longdescription":"The hallway stretches like a shadowy artery through the heart of the Overlook Hotel, connecting the lobby to the guest rooms, kitchen, and other areas of the hotel. The narrow corridor is dimly lit by flickering sconces set into the walls, casting long shadows that dance across the faded wallpaper. Vintage artwork adorns the walls, depicting scenes of bygone eras and echoing the hotel's storied past. As guests traverse the length of the hallway, they catch glimpses of the grand ballroom at the end, its double doors beckoning invitingly with the promise of revelry and celebration. Despite its faded grandeur, there's a palpable sense of history and mystery lurking within the shadows of the hallway, waiting to be discovered by intrepid adventurers.",
-      "shortdescription":"A long corridor connecting various rooms of the hotel, illuminated by dim sconces and lined with vintage artwork, leading to the ballroom.",
+      "id": "Crew Cabins",
+      "name": "Crew Cabins",
+      "longdescription": "Small, personal rooms where crew members sleep and keep their belongings. Each cabin is personalized with the occupant's items. You see a note on one of the tables.",
+      "shortdescription":"Personal rooms for the crew, filled with their belongings. There is a note on a table.",
       "exits": [
         {
           "isLocked": false,
           "direction": "East",
-          "adjacentRoom": "Rustic Guest Room"
-        },
+          "adjacentRoom": "Crew Lounge"
+        }
+      ]
+    },
+    {
+      "id": "Doctor's Office",
+      "name": "Doctor's Office",
+      "longdescription": "A private office where medical records are stored and medical procedures are conducted. There are photos of the doctor and their family members all over the room.",
+      "shortdescription":"",
+      "exits": [
         {
           "isLocked": false,
-          "direction": "North",
-          "adjacentRoom": "Hallway 1d"
+          "direction": "East",
+          "adjacentRoom": "Medical Bay"
+        }
+      ]
+    },
+    {
+      "id": "Workshop",
+      "name": "Workshop",
+      "longdescription": "The workshop is a cluttered space with workbenches covered in various projects. Shelves line the walls, filled with components and materials for crafting and repairing ship parts. You here sounds in the room next to you, and there is a wire hanging from the Engineering Room which looks like it could be connected to some kind of supply.",
+      "shortdescription":"The workshop is a  space with workbenches and materials for crafting and repairing ship parts. There is a wire hanging where a power supply could be connected.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "West",
+          "adjacentRoom": "Hallway"
+        },
+        {
+          "isLocked": true,
+          "direction": "East",
+          "adjacentRoom": "Reactor Room"
         },
         {
           "isLocked": false,
           "direction": "South",
-          "adjacentRoom": "Ballroom"
+          "adjacentRoom": "Droid Maintenence"
+        }
+        
+      ]
+    },
+    {
+      "id": "Hallway 2",
+      "name": "Hallway",
+      "longdescription":"A dimly lit hallway stretches through the ship, qith doors to the north, east, and south. You hear faint sounds in the distance. ",
+      "shortdescription":"A corridor connecting many parts of the ship",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Medical Bay"
+        },
+        {
+          "isLocked": false,
+          "direction": "South",
+          "adjacentRoom": "Cargo Hold"
+        },
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "Workshop"
         }
       ]
-    }
+    },
+    {
+      "id": "Cargo Hold",
+      "name": "Hallway",
+      "longdescription":"The Cargo Hold is a vast space filled with crates and containers of various sizes. The air is filled with the scent of metal and machinery, and the sounds in the distance have gotten louder.",
+      "shortdescription":"An area with various containers and crates.",
+      "exits": [
+        {
+          "isLocked": true,
+          "direction": "West",
+          "adjacentRoom": "Shuttle Bay",
+          "keyId": "3333"
+        },
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Hallway 2"
+        },
+        {
+          "isLocked": true,
+          "direction": "South",
+          "adjacentRoom": "Supply Room",
+          "keyId": "4444"
+        },
+        {
+        "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "Droid Maintenence"
+      }
+      ]
+    },
+    {
+      "id": "Supply Room",
+      "name": "Supply Room",
+      "longdescription":"The Supply Room is a well-organized space filled with shelves stocked with various supplies. The room is brightly lit, making it easy to find what you need.",
+      "shortdescription":"A well-organized room stocked with various supplies.",
+      "exits": [
+        {
+            "isLocked": false,
+            "direction": "North",
+            "adjacentRoom": "Cargo Hold"
+          }
+      ]
+    },
+    {
+      "id": "Shuttle Bay",
+      "name": "Shuttle Bay",
+      "longdescription":"The Shuttle Bay is a large, open space designed to house and launch shuttles for planetary exploration. Several shuttles are docked here, each ready for immediate deployment. When you walk in, you see a droid that comes towards you, and it seems to be guarding something.",
+      "shortdescription":"A large space for housing and launching shuttles. There is a droid who is guarding something.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "East",
+          "adjacentRoom": "Cargo Hold"
+        }
+      ]
+        },
+        {
+          "id": "Droid Maintenence",
+          "name": "Droid Maintenence",
+          "longdescription":"This room is dedicated to the maintenance and repair of the ship's droids. It's equipped with diagnostic stations, repair tools, and spare parts for various types of droids. The room is tidy and organized, and there is a red button in the corner. You suddenly hear a loud alarm and multiple droids come rushing towards you. ",
+          "shortdescription":"A room dedicated to the maintenance and repair of the ship's droids, equipped with repair tools. There is a red button in the corner, and you suddenly see multiple droids coming towards you.",
+          "exits": [
+            {
+              "isLocked": false,
+              "direction": "North",
+              "adjacentRoom": "Workshop"
+            },
+            {
+            "isLocked": false,
+              "direction": "West",
+              "adjacentRoom": "Cargo Hold"
+            }
+          ]
+        },
+            {
+              "id": "Reactor Room",
+              "name": "Reactor Room",
+              "longdescription":" A room with the ship's main power source. It's a large, area with a massive reactor at its center, filled with energy. There is a tense atmosphere, and you feel like someone else is watching you. You suddenly see your friend in some kind of a box, with a large droid and an alien guarding it. An alarm sounds and they come towards you.",
+              "shortdescription":"A large room with the ship's power source, you see your friend trapped in the corner guarded by a large alien and droid, and they come towards you.",
+              "exits": [
+                {
+                  "isLocked": false,
+                  "direction": "West",
+                  "adjacentRoom": "Workshop"
+                }
+      ]
+    },
+    
+    {
+      "id": "Supply Room",
+      "name": "Supply Room",
+      "longdescription":" The Supply Room is a well-organized space filled with shelves stocked with various supplies. Everything is neatly labeled and stored here. You suddenly see an alien who runs towards you, speaking in a foreign language.",
+      "shortdescription":"A well-organized room stocked with various supplies. You see an alien running towards you.",
+      "exits": [
+        {
+          "isLocked": false,
+          "direction": "North",
+          "adjacentRoom": "Cargo Hold"
+        }
+  ]
+}
   ]
 }

@@ -94,13 +94,7 @@ public class Room {
     return null;
   }
 
-  /*
-   * private int getDirectionIndex(String direction) { int dirIndex = 0; for
-   * (String dir : directions) { if (dir.equals(direction)) return dirIndex; else
-   * dirIndex++; }
-   * 
-   * throw new IllegalArgumentException("Invalid Direction"); }
-   */
+  
   public String getRoomName() {
     return roomName;
   }

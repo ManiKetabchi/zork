@@ -1,30 +1,50 @@
 {
     "items":[
         {
-            "id":"straw",
-            "name":"paper straw",
-            "description":"a paper straw that will likely get soggy as soon as it enters a liquid",
-            "room_id":"Hallway",
-            "weight":"5",
-            "isOpenable":"false"
-        },
-        {
-            "id":"Chest",
-            "name":"A Big Chest",
-            "description":"A nice big chest",
-            "room_id":"Bedroom",
-            "weight":"10000",
-            "isOpenable":"true",
+            "id":"Walkie Talkie",
+            "name":"Walkie Talkie",
+            "description":"A small, black walkie talke that is switched off. ",
+            "room_id":"Communication Room",
+            "weight":"8",
+            "isOpenable":"false",
             "isLockable":"false"
         },
         {
-            "id":"straw2",
-            "name":"big paper straw",
-            "description":"a paper straw that will likely get soggy as soon as it enters a liquid",
-            "item_id":"Chest",
-            "weight":"6",
-            "isOpenable":"false"
+            "id":"Gun",
+            "name":"Gun",
+            "description":"A large gun that looks like it could do reasonable damage",
+            "room_id":"Hallway",
+            "weight":"12",
+            "isOpenable":"false",
+            "isLockable":"false"
         },
+            {
+                "id":"Box 1",
+                "name":"Box",
+                "description":"A red, unlocked box that contains some kind of power supply",
+                "room_id":"Storage Room",
+                "weight":"12",
+                "isOpenable":"true",
+                "isLockable":"false"
+            },
+            {
+                "id":"Box 2",
+                "name":"Locked Box",
+                "description":"A red, locked box with 4 slots to put in a number combination. It feels reasonably heavy",
+                "room_id":"Crew Lounge",
+                "weight":"12",
+                "isOpenable":"true",
+                "isLockable":"true"
+            },
+            {
+                "id":"Note",
+                "name":"Note",
+                "description":"A piece of paper with the numbers 4703 at the top, and a ",
+                "room_id":"Crew Cabins",
+                "weight":"3",
+                "isOpenable":"true",
+                "isLockable":"false"
+            },
         {
 
         }
