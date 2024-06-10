@@ -122,7 +122,8 @@ public class Game {
     printWelcome();
 
     boolean finished = false;
-    while (!finished) {
+
+    /**  while (!finished) {
       Command command;
       try {
         command = parser.getCommand();
@@ -131,7 +132,7 @@ public class Game {
         e.printStackTrace();
       }
 
-    }
+    }  */
     System.out.println("Thank you for playing.  Good bye.");
   }
 
@@ -139,11 +140,8 @@ public class Game {
    * Print out the opening message for the player.
    */
   private void printWelcome() {
-    GameInfo.clearScreen();
-    for (String s : GameInfo.introMessage) {
-      System.out.println(s);
-      System.out.println();
-    }
+  GameInfo.clearScreen();
+    System.out.print(GameInfo.introMsg());
     System.out.println();
     System.out.println("Type 'help' if you need help.");
     System.out.println();
