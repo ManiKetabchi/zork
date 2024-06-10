@@ -1,6 +1,7 @@
 package zork;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Inventory {
   private ArrayList<Item> items;
@@ -37,6 +38,11 @@ public Item removeItem(Item item) {
     }
     return null; // Item not found in the inventory
 }
+
+public List<Item> getItems() {
+    return items;
+  }
+
 }
 
 

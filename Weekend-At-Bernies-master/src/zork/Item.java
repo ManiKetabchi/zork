@@ -5,7 +5,7 @@ public class Item extends OpenableObject {
   private String name;
   private String description;
   private boolean isOpenable;
-  private Inventory inventory;
+  public Inventory inventory;
   private Boolean isStationary;
   
 
@@ -22,7 +22,10 @@ public class Item extends OpenableObject {
   public void open() {
     if (!isOpenable)
       System.out.println("The " + name + " cannot be opened.");
+  }
 
+  public String getDescription() {
+    return description;
   }
 
   public int getWeight() {

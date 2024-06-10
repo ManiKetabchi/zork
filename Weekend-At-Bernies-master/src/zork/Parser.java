@@ -3,15 +3,24 @@ package zork;
 import java.util.Scanner;
  
 public class Parser {
-    private CommandWords commands; // holds all valid command words
+    public CommandWords commands; // holds all valid command words
     private Scanner in;
     private Inventory inventory;
  
     public Parser() {
-        commands = new CommandWords();
+        //commands = new CommandWords();
         in = new Scanner(System.in);
         inventory = new Inventory(100); // Assuming maximum inventory weight is 100
     }
+
+    public Item findItem(String itemName) {
+        for (Item item : Inventory.getItems()) {
+            if (item.getName().equalsIgnoreCase(itemName)) {
+                return item;
+            }
+        }
+        return null;
+    } 
  
     public Command getCommand() throws java.io.IOException {
         String inputLine = "";
