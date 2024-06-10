@@ -128,4 +128,29 @@ public class CommandWords {
         System.out.println("You attack with the " + item.getName() + ".");
         // Implement 
     }
+
+public class Player { // PLAYER CLASS
+    private Room currentRoom;
+    private Inventory inventory;
+
+    public Player(Room startingRoom) {
+        this.currentRoom = startingRoom;
+        this.inventory = new Inventory(100); // MAXWEIGHT TO BE UPDATED
+    }
+
+    public Room getCurrentRoom() {
+        return currentRoom;
+    }
+
+    public void setCurrentRoom(Room room) {
+        this.currentRoom = room;
+    }
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    
+}
+
 }
