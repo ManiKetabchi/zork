@@ -31,8 +31,13 @@ public class Inventory {
   }
 
 public Item removeItem(Item item) {
-    
-    throw new UnsupportedOperationException("Unimplemented method 'removeItem'");
+  if (items.remove(item)) {
+        currentWeight -= item.getWeight();
+        return item;
+    }
+    return null; // Item not found in the inventory
+}
 }
 
-}
+
+

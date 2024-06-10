@@ -57,10 +57,8 @@ public class Item extends OpenableObject {
     else 
       return false;
 }
-pulic void StationaryObject(Item item){
-  if isStationary(){
-    
-  }
+public void stationaryObject(Item item){
+  
 }
 public Item removeItem(Item item){
   if(isOpenable)
