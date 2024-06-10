@@ -33,10 +33,6 @@ public class Item extends OpenableObject {
     return weight;
   }
 
-  public String getDescription() {
-    return description;
-  }
-
   public void setWeight(int weight) {
     this.weight = weight;
   }
