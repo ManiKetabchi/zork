@@ -123,7 +123,7 @@ public class Game {
 
     boolean finished = false;
 
-    /**  while (!finished) {
+    while (!finished) {
       Command command;
       try {
         command = parser.getCommand();
@@ -132,7 +132,7 @@ public class Game {
         e.printStackTrace();
       }
 
-    }  */
+    }  
     System.out.println("Thank you for playing.  Good bye.");
   }
 
@@ -145,7 +145,7 @@ public class Game {
     System.out.println();
     System.out.println("Type 'help' if you need help.");
     System.out.println();
-    System.out.println(currentRoom.longDescription());
+    System.out.println("HHH");
   }
 
   /**
