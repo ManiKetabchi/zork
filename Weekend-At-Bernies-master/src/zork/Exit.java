@@ -40,4 +40,13 @@ public class Exit extends OpenableObject {
     this.adjacentRoom = adjacentRoom;
   }
 
+  public void unlock(String keyId) {
+    if (isLocked() && keyId != null && keyId.equals(getKeyId())) {
+      setOpen(true);
+      System.out.println("You have unlocked the door to the " + getDirection() + ".");
+    } else {
+      System.out.println("You don't have the right key to unlock this door.");
+    }
+  }
 }
+

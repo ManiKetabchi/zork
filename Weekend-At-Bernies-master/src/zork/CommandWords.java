@@ -11,12 +11,14 @@ public class CommandWords {
     };
  
     private Inventory inventory;
+    private Player player;
  
     /**
      * Constructor - initialise the command words.
      */
-    public CommandWords(Inventory inventory) {
+    public CommandWords(Inventory inventory, Player player) {
         this.inventory = inventory;
+        this.player = player;
     }
  
     /**
@@ -65,17 +67,17 @@ public class CommandWords {
         showAll();
     }
  
-    public void eat() {
+    public void eat(Item item) {
       int healthBenefit = item.getHealthBenefit();
       if (healthBenefit > 0) {
         player.increaseHealth(healthBenefit);
-        player.removeFromInventory(item);
+        inventory.removeItem(item);
         System.out.println("You have eaten" + item.getName() + " and restored" + item.healthBenefit + "health points.");
     } else{
       System.out.println(item.getName() + " cannot be eaten.");
             }
     }
-  }
+  
 
     public void look(Player player) {
         System.out.println(player.getCurrentRoom().longDescription());
@@ -129,28 +131,6 @@ public class CommandWords {
         // Implement 
     }
 
-public class Player { // PLAYER CLASS
-    private Room currentRoom;
-    private Inventory inventory;
 
-    public Player(Room startingRoom) {
-        this.currentRoom = startingRoom;
-        this.inventory = new Inventory(100); // MAXWEIGHT TO BE UPDATED
-    }
-
-    public Room getCurrentRoom() {
-        return currentRoom;
-    }
-
-    public void setCurrentRoom(Room room) {
-        this.currentRoom = room;
-    }
-
-    public Inventory getInventory() {
-        return inventory;
-    }
-
-    
-}
 
 }
