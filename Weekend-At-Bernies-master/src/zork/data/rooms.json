@@ -104,7 +104,7 @@
     {
       "id": "Mess Hall",
       "name": "Mess Hall",
-      "longdescription": "A cafeteria, which has long tables and benches, used to be where the crew gathered to eat and discuss daily activities, but now it sits empty. There is a bag with a sandwhich and a bottle of water on the table.",
+      "longdescription": "A cafeteria, which has long tables and benches, used to be where the crew gathered to eat and discuss daily activities, but now it sits empty. There is a sandwhich and a bottle of water on the table.",
       "shortdescription":"A cafeteria, which is empty, and has a sandwhich and a bottle of water on a table.",
       "exits": [
         {
@@ -182,7 +182,7 @@
           "isLocked": false,
           "direction": "North",
           "adjacentRoom": "Crew Lounge"
-        }
+        }9
       ]
     },
     {

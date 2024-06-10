@@ -94,6 +94,9 @@ public class Room {
     return null;
   }
 
+  public void captainsQuarters(){
+    
+  }
   
   public String getRoomName() {
     return roomName;

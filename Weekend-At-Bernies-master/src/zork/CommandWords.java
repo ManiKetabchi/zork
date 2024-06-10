@@ -66,9 +66,17 @@ public class CommandWords {
     }
  
     public void eat() {
-        System.out.println("You have eaten now and you are not hungry anymore.");
+      int healthBenefit = item.getHealthBenefit();
+      if (healthBenefit > 0) {
+        player.increaseHealth(healthBenefit);
+        player.removeFromInventory(item);
+        System.out.println("You have eaten" + item.getName() + " and restored" + item.healthBenefit + "health points.");
+    } else{
+      System.out.println(item.getName() + " cannot be eaten.");
+            }
     }
- 
+  }
+
     public void look(Player player) {
         System.out.println(player.getCurrentRoom().longDescription());
     }
@@ -95,7 +103,7 @@ public class CommandWords {
  
     public void use(Item item) {
         System.out.println("You use the " + item.getName() + ".");
-        // implement
+        // implement 
     }
  
     public void open(Item item) {

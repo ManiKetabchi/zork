@@ -56,13 +56,24 @@
             "keyId": "2222"
         },
         {
-            "id":"Bag",
-            "name":"Bag",
-            "description":"A bag with a cheese sandwhich and a bottle of water found in the mess hall",
-            "room_id":"Mess Hall",
-            "weight":"9",
-            "isOpenable":"false",
-            "isLockable":"false"
+            "id": "Sandwich",
+            "name": "Sandwich",
+            "description": "A cheese sandwich that restores some health.",
+            "room_id": "Mess Hall",
+            "weight": "5",
+            "isOpenable": "false",
+            "isLockable": "false",
+            "healthBenefit": 20
+        },
+        {
+            "id": "Water",
+            "name": "Bottle of Water",
+            "description": "A bottle of water that restores some health.",
+            "room_id": "Mess Hall",
+            "weight": "5",
+            "isOpenable": "false",
+            "isLockable": "false",
+            "healthBenefit": 10
         },
         {
             "id":"Power",
