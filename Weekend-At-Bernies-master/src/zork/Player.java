@@ -8,7 +8,7 @@ public class Player {
     
         public Player(Room startingRoom) {
             this.currentRoom = startingRoom;
-            this.inventory = new Inventory(100); // MAXWEIGHT TO BE UPDATED
+            this.inventory = new Inventory(100); 
         }
     
         public Room getCurrentRoom() {

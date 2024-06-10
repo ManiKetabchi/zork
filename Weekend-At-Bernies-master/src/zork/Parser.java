@@ -23,7 +23,7 @@ public class Parser {
       }
       return null;
   }
- 
+
     public Command getCommand() throws java.io.IOException {
         String inputLine = "";
         String[] words;
@@ -65,7 +65,7 @@ public class Parser {
                     System.out.println("You don't have " + word2 + " in your inventory.");
                 }
             } else if (word1.equals("inventory")) {
-                commands.inventory(inventory);
+                commands.inventory( inventory);
                 return new Command(word1, word2);
             } else if (word1.equals("examine") && word2 != null) {
                 Item item = findItem(word2);
@@ -109,5 +109,10 @@ public class Parser {
             return new Command(null, word2);
         }
         return null; 
+    }
+
+    public void parseDirections(String input, Player player){
+
+
     }
 }

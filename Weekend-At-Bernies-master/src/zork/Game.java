@@ -64,7 +64,7 @@ public class Game {
       String description = (String) ((JSONObject) itemObj).get("description");
       int itemWeight = Integer.parseInt((String) ((JSONObject) itemObj).get("weight"));
       boolean isOpenable = Boolean.parseBoolean((String) ((JSONObject) itemObj).get("isOpenable"));
-      boolean isStationary = Boolean.parseBoolean((String)((JSONObject) itemObj).get("isStationary"));
+      //boolean isStationary = Boolean.parseBoolean((String)((JSONObject) itemObj).get("isStationary"));
       String loc_id = (String) ((JSONObject) itemObj).get("room_id");
       Item item = new Item(itemWeight, itemName, isOpenable, description);
 
@@ -181,9 +181,6 @@ public class Game {
    * and a list of the command words.
    */
   private void printHelp() {
-    System.out.println("You are lost. You are alone. You wander");
-    System.out.println("around at Monash Uni, Peninsula Campus.");
-    System.out.println();
     System.out.println("Your command words are:");
     System.out.println("");
     System.out.println("");
@@ -207,6 +204,17 @@ public class Game {
 
     String direction = command.getSecondWord();
 
+    if (!(command.equals("North")) || (command.equals("South")) || (command.equals("East")) || (command.equals("West"))){
+     
+      System.out.println("Invalid direction. Please enter 'north', 'south', 'east', or 'west'.");
+  }
+  Exit exit = currentRoom.getExit(direction);
+  if (exit == null) {
+    System.out.println("There is no exit in that direction.");
+} else {
+    // Check if the exit is locked
+    if (exit.isLocked()) {
+        System.out.println("The door is locked.");
     // Try to leave current room.
     Room nextRoom = currentRoom.nextRoom(direction);
 
@@ -217,4 +225,17 @@ public class Game {
       System.out.println(currentRoom.longDescription() + "\n\n");
     }
   }
+}
+if (command.equals("use")) {
+  if (command.hasSecondWord()) {
+      if (command.getSecondWord().equals("button")) {
+          currentRoom.pressButton();
+      } else {
+          System.out.println("You can't do that with the " + command.getSecondWord() + ".");
+      }
+  } else {
+      System.out.println("Use " + command + " what?");
+  }
+  }
+}
 }

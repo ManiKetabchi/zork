@@ -72,7 +72,7 @@ public class CommandWords {
       if (healthBenefit > 0) {
         player.increaseHealth(healthBenefit);
         inventory.removeItem(item);
-        System.out.println("You have eaten" + item.getName() + " and restored" + item.healthBenefit + "health points.");
+        System.out.println("You have eaten" + item.getName() + "and now you aren't hungry");
     } else{
       System.out.println(item.getName() + " cannot be eaten.");
             }

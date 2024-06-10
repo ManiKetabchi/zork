@@ -61,6 +61,25 @@ public class Room {
    * Return a string describing the room's exits, for example "Exits: north west
    * ".
    */
+
+   public void pressButton() {
+    if (this.getRoomName().equals("Captain's Quarters")) {
+       
+        System.out.println("You press the red button, it opens the door to the bridge.");
+        unlockExits("1111");
+    } else {
+        System.out.println("There is no button to press in this room.");
+    }
+
+    if (this.getRoomName().equals("Droid Maintenence")) {
+       
+      System.out.println("You press the red button, it opens the door to the supply room");
+      unlockExits("4444");
+  } else {
+      System.out.println("There is no button to press in this room.");
+  }
+}
+
   private String exitString() {
     String returnString = "\nExits: ";
     for (Exit exit : exits) {
@@ -69,7 +88,13 @@ public class Room {
 
     return returnString;
   }
-
+  private void unlockExits(String keyId) {
+    for (Exit exit : exits) {
+        if (exit.isLocked() && exit.getKeyId().equals(keyId)) {
+            exit.unlock(keyId);
+        }
+      }
+      }
   /**
    * Return the room that is reached if we go from this room in direction
    * "direction". If there is no room in that direction, return null.
@@ -95,7 +120,7 @@ public class Room {
   }
 
   public void captainsQuarters(){
-    
+
   }
   
   public String getRoomName() {
