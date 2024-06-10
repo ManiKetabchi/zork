@@ -6,6 +6,7 @@ public class Item extends OpenableObject {
   private String description;
   private boolean isOpenable;
   private Inventory inventory;
+  private Boolean isStationary;
   
 
   public Item(int weight, String name, boolean isOpenable, String description) {
@@ -13,6 +14,7 @@ public class Item extends OpenableObject {
     this.name = name;
     this.isOpenable = isOpenable;
     this.description = description;
+    this.isStationary = isStationary;
     if (isOpenable)
     inventory = new Inventory(100);
   }
@@ -46,14 +48,20 @@ public class Item extends OpenableObject {
   public void setOpenable(boolean isOpenable) {
     this.isOpenable = isOpenable;
   }
-
+  public boolean isStationary() {
+    return isStationary;
+  }
   public boolean addItem(Item item) {
     if (isOpenable)
       return inventory.addItem(item);
     else 
       return false;
 }
-
+pulic void StationaryObject(Item item){
+  if isStationary(){
+    
+  }
+}
 public Item removeItem(Item item){
   if(isOpenable)
     return inventory.removeItem(item);

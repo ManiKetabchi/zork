@@ -64,7 +64,7 @@ public class Game {
       String description = (String) ((JSONObject) itemObj).get("description");
       int itemWeight = Integer.parseInt((String) ((JSONObject) itemObj).get("weight"));
       boolean isOpenable = Boolean.parseBoolean((String) ((JSONObject) itemObj).get("isOpenable"));
-
+      boolean isStationary = Boolean.parseBoolean((String)((JSONObject) itemObj).get("isStationary"));
       String loc_id = (String) ((JSONObject) itemObj).get("room_id");
       Item item = new Item(itemWeight, itemName, isOpenable, description);
 
@@ -189,6 +189,9 @@ public class Game {
     System.out.println("Your command words are:");
     parser.showCommands();
   }
+
+
+
 
   /**
    * Try to go to one direction. If there is an exit, enter the new room,

@@ -39,14 +39,12 @@
             {
                 "id":"Note",
                 "name":"Note",
-                "description":"A piece of paper with the numbers 4703 at the top, and a ",
+                "description":"A piece of paper with the numbers 4703 at the top",
                 "room_id":"Crew Cabins",
                 "weight":"3",
                 "isOpenable":"true",
                 "isLockable":"false"
-            },
-        {
-
-        }
+            }
+        
     ]
 }

@@ -42,11 +42,119 @@
                 "description":"A piece of paper with the numbers 4703 at the top, and a ",
                 "room_id":"Crew Cabins",
                 "weight":"3",
-                "isOpenable":"true",
+                "isOpenable":"false",
                 "isLockable":"false"
             },
         {
-
+            "id":"Photo",
+            "name":"Photo",
+            "description":"A framed photo of the ship doctor, with family members ",
+            "room_id":"Doctor's Office",
+            "weight":"9",
+            "isOpenable":"false",
+            "isLockable":"false",
+            "keyId": "2222"
+        },
+        {
+            "id":"Bag",
+            "name":"Bag",
+            "description":"A bag with a cheese sandwhich and a bottle of water found in the mess hall",
+            "room_id":"Mess Hall",
+            "weight":"9",
+            "isOpenable":"false",
+            "isLockable":"false"
+        },
+        {
+            "id":"Power",
+            "name":"Power Supply",
+            "description":"A small power supply that looks like it can be connected to something",
+            "room_id":"Storage Room",
+            "weight":"6",
+            "isOpenable":"false",
+            "isLockable":"false"
+        },
+        {
+            "id":"Power 2",
+            "name":"Power Supply 2",
+            "description":"A small power supply that looks like it can be connected to something",
+            "room_id":"Crew Lounge",
+            "weight":"6",
+            "isOpenable":"false",
+            "isLockable":"false"
+        },
+        {
+            "id":"Wire",
+            "name":"Wire",
+            "description":"A dangling wire which looks like it can be connected to something",
+            "room_id":"Workshop",
+            "isOpenable":"false",
+            "isLockable":"false",
+            "isStationary":"true"
+        },
+        {
+            "id":"Holographic 1",
+            "name":"Holographic Display",
+            "description":"A holographic display that looks like it is broken",
+            "room_id":"Situation Room",
+            "isOpenable":"false",
+            "isLockable":"false",
+            "isStationary":"true"
+        },
+        {
+            "id":"Holographic 2",
+            "name":"Holographic Display",
+            "description":"A holographic display that looks like it is broken",
+            "room_id":"Medical Bay",
+            "isOpenable":"false",
+            "isLockable":"false",
+            "isStationary":"true"
+        },
+        {
+            "id":"Button",
+            "name":"Button",
+            "description":"A big red button ",
+            "room_id":"Captain's Quarters",
+            "isOpenable":"false",
+            "isLockable":"false",
+            "isStationary":"true",
+            "keyId" : "1111"
+        },
+        {
+            "id":"Button 2",
+            "name":"Button",
+            "description":"A big red button ",
+            "room_id":"Droid Maintenence",
+            "isOpenable":"false",
+            "isLockable":"false",
+            "isStationary":"true",
+            "keyId": "4444"
+        },
+        {
+            "id":"Red Key 1",
+            "name":"Red Keycard",
+            "description":"A red keycard that looks like it can open a door",
+            "room_id":"Engineering Room",
+            "isOpenable":"false",
+            "isLockable":"false",
+            "keyId": "8888"
+        },
+        {
+            "id":"Red Key 2",
+            "name":"Red Keycard 2",
+            "description":"Another red keycard that looks like it can open a door",
+            "room_id":"Shuttle Bay",
+            "isOpenable":"false",
+            "isLockable":"false",
+            "keyId": "9999"
+        },
+        {
+            "id":"Id",
+            "name":"ID",
+            "description":"An keycard ID for a crew member",
+            "room_id":"Supply Room",
+            "isOpenable":"false",
+            "isLockable":"false",
+            "keyId": "3333"
         }
     ]
 }

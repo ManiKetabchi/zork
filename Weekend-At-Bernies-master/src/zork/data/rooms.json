@@ -104,7 +104,7 @@
     {
       "id": "Mess Hall",
       "name": "Mess Hall",
-      "longdescription": "A cafeteria, which has long tables and benches, used to be where the crew gathered to eat and discuss daily activities, but now it sits empty. There is a sandwhich and a bottle of water on the table.",
+      "longdescription": "A cafeteria, which has long tables and benches, used to be where the crew gathered to eat and discuss daily activities, but now it sits empty. There is a bag with a sandwhich and a bottle of water on the table.",
       "shortdescription":"A cafeteria, which is empty, and has a sandwhich and a bottle of water on a table.",
       "exits": [
         {
@@ -159,7 +159,7 @@
     {
       "id": "Medical Bay",
       "name": "Medical Bay",
-      "longdescription": "A well equipped facility for treating illnesses,  injuries, and conducting medical examinations. There is another holographic screen that displays nothing. ",
+      "longdescription": "A well equipped facility for treating illnesses,  injuries, and conducting medical examinations. There is another holographic screen that displays nothing, and edits to the south, west and east, and the east has some kind of scanner in front of it.",
       "shortdescription":" A facility for treating illnesses. There is a broken holographic display in the corner.",
       "exits": [
         {
@@ -238,7 +238,8 @@
         {
           "isLocked": true,
           "direction": "East",
-          "adjacentRoom": "Reactor Room"
+          "adjacentRoom": "Reactor Room",
+          "keyId": ["8888", "9999"]
         },
         {
           "isLocked": false,
@@ -301,19 +302,7 @@
       }
       ]
     },
-    {
-      "id": "Supply Room",
-      "name": "Supply Room",
-      "longdescription":"The Supply Room is a well-organized space filled with shelves stocked with various supplies. The room is brightly lit, making it easy to find what you need.",
-      "shortdescription":"A well-organized room stocked with various supplies.",
-      "exits": [
-        {
-            "isLocked": false,
-            "direction": "North",
-            "adjacentRoom": "Cargo Hold"
-          }
-      ]
-    },
+      
     {
       "id": "Shuttle Bay",
       "name": "Shuttle Bay",
